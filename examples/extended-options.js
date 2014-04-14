@@ -14,13 +14,14 @@ var connection = amqp.connect( 'amqp://guest:qoszeubbegzwqlrj@localhost', {
   virtualHost: 'test',
   clientProperties: {
     product: 'test-product',
-    version: '999',
+    host: require( 'os' ).hostname(),
+    version: require( '../package.json' ).version,
     platform: 'test-platform',
     information: 'test-information',
+    custom: 'custom-value',
     capabilities: {
       my_cap: true
     }
   }
 });
 
-//connection
