@@ -23,5 +23,4 @@ var connection = amqp.connect( 'amqp://guest:qoszeubbegzwqlrj@localhost', {
   }
 });
 
-
-
+//connection
